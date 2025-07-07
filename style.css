@@ -1,15 +1,24 @@
 body {
   font-family: 'Pretendard', sans-serif;
-  max-width: 700px;
   margin: 0 auto;
   padding: 2rem;
   background: #f9f9f9;
   color: #333;
 }
 
+header h1 a {
+  text-decoration: none;  /* 밑줄 제거 */
+  color: inherit;          /* 부모(h1)의 색상 따라가기 */
+}
+
 header {
   text-align: center;
   margin-bottom: 3rem;
+}
+
+#content {
+  margin-top: 80px; /* 헤더 높이만큼 아래로 띄움 */
+  padding: 1rem;
 }
 
 article {
@@ -22,4 +31,125 @@ article {
 
 article h2 {
   margin-top: 0;
+}
+
+/* 네비게이션 헤더 스타일 */
+.nav-header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;           /* 수평 정렬 */
+  gap: 1rem;               /* 메뉴 간격 */
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;     /* 아이콘 + 텍스트 수직 정렬 */
+}
+
+.nav-list .icon {
+  margin-right: 0.5rem;    /* 아이콘과 텍스트 간격 */
+  font-size: 1rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* 자동 줄바꿈 */
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+
+
+
+
+
+.three-column-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr 180px;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar-left,
+.sidebar-right {
+  background: #f8f8f8;
+  padding: 1rem;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.main-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.sidebar-left ul,
+.sidebar-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-left li a,
+.sidebar-right li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.sidebar-left li a:hover,
+.sidebar-right li a:hover {
+  color: #007acc;
+}
+
+.sidebar-right {
+  position: sticky;
+  top: 100px;
 }

@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Velog Blog</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Velog Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
+
 <body>
-  <header>
-    <h1>im's devlog</h1>
-  </header>
-  <main>
-    <article>
-      <h2>Velog 스타일 따라하기</h2>
-      <p>이건 Velog 느낌의 블로그 예시입니다.</p>
-    </article>
-    <article>
-      <h2>첫 번째 글</h2>
-      <p>GitHub Pages로 블로그 만드는 중!</p>
-    </article>
-  </main>
+    <header>
+        <h1><a href="index.html">im's devlog</a></h1>
+    </header>
+
+    <!-- 네비게이션 헤더 -->
+    <header class="nav-header">
+        <nav>
+            <ul class="nav-list">
+                <li>
+                    <a href="#" data-page="pages/algorithm.html">
+                        <img src="images/101-gameplan.png" alt="Algorithm Icon" class="icon"> Algorithm
+                    </a>
+                </li>
+               <li>
+                    <a href="#" data-page="pages/language.html">
+                        <img src="images/08-chat.png" alt="Language Icon" class="icon"> Language
+                    </a>
+                </li>
+                 <li>
+                    <a href="#" data-page="pages/git.html">
+                        <img src="images/82-dogpaw.png" alt="Git Icon" class="icon"> Git
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <article>
+            <h2>Velog 스타일 따라하기</h2>
+            <p>이건 Velog 느낌의 블로그 예시입니다.</p>
+        </article>
+        <article>
+            <h2>첫 번째 글</h2>
+            <p>GitHub Pages로 블로그 만드는 중!</p>
+        </article>
+    </main>
 </body>
+
 </html>
